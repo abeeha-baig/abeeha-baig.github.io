@@ -43,3 +43,17 @@ Currently pursuing a Master’s in **Data Sciences** from NED University.
 🐙 [GitHub](https://github.com/abeeha-baig)
 
 📄 [Download My Resume](assets/resume.pdf)
+
+---
+
+## 🚀 My Projects
+
+| Project | Description | Link |
+|----------|--------------|------|
+| **Financial Data Bot** | Query CSV-based financial data using natural language via Pandas Agent. | [View Project](projects/financial-chatbot.md) |
+| **Lifestyle Agent** | AI assistant that summarizes wellness articles using GPT-4o-mini. | [View Project](projects/lifestyle-agent.md) |
+| **RAG-ODS Chatbot** | RAG-based Q/A system for Oracle DB security docs. | [View Project](projects/rag-ods.md) |
+| **Next Word Prediction (GPT-2)** | Fine-tuned GPT-2 model for next-word generation. | [View Project](projects/next-word-prediction.md) |
+
+---
+
