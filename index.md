@@ -42,6 +42,4 @@ Currently pursuing a Master’s in **Data Sciences** from NED University.
 💼 [LinkedIn](https://www.linkedin.com/in/abeeha-baig-401a60240/)  
 🐙 [GitHub](https://github.com/abeeha-baig)
 
-📄 [Download My Resume](assets/resume.pdf)
-
 ---
