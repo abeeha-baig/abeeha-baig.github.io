@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (err) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abeeha Baig — AI/ML Engineer</title>
+  <meta name="description" content="Abeeha Baig is an AI/ML engineer building generative AI systems, LLM applications, AI agents, RAG pipelines, and computer vision solutions.">
+  <meta name="author" content="Abeeha Baig">
+  <meta name="theme-color" content="#0b0e14">
+  <link rel="canonical" href="https://abeeha-baig.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Abeeha Baig">
+  <meta property="og:title" content="Abeeha Baig — AI/ML Engineer">
+  <meta property="og:description" content="Generative AI, LLMs, AI agents, RAG, and computer vision. Production systems for healthcare, pharma, and fintech.">
+  <meta property="og:url" content="https://abeeha-baig.github.io/">
+  <meta property="og:image" content="https://abeeha-baig.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Abeeha Baig, AI/ML Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abeeha Baig — AI/ML Engineer">
+  <meta name="twitter:description" content="Generative AI, LLMs, AI agents, RAG, and computer vision.">
+  <meta name="twitter:image" content="https://abeeha-baig.github.io/assets/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abeeha Baig",
+    "jobTitle": "AI/ML Engineer",
+    "email": "mailto:abeehamirza18@gmail.com",
+    "url": "https://abeeha-baig.github.io/",
+    "image": "https://abeeha-baig.github.io/assets/profile.jpeg",
+    "sameAs": [
+      "https://www.linkedin.com/in/abeeha-baig-401a60240/",
+      "https://github.com/abeeha-baig"
+    ],
+    "knowsAbout": [
+      "Generative AI",
+      "Large language models",
+      "AI agents",
+      "Retrieval-augmented generation",
+      "Computer vision",
+      "OCR"
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "NED University of Engineering and Technology"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Karachi Institute of Economics and Technology"
+      }
+    ],
+    "knowsLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">AB</span>
+      <span>Abeeha Baig</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="visually-hidden">Open menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
+      <div class="hero-spot" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <figure class="portrait">
+          <img src="assets/profile.jpeg" width="800" height="800" alt="Portrait of Abeeha Baig" fetchpriority="high">
+        </figure>
+        <div class="hero-copy">
+          <p class="eyebrow">AI Innovation Engineer · Qordata</p>
+          <h1 id="hero-title"><span class="name-first">Abeeha</span> <span class="name-last">Baig</span></h1>
+          <p class="role">
+            <span class="visually-hidden sr-role">AI/ML Engineer — Generative AI, LLMs, AI Agents, RAG, Computer Vision</span>
+            <span class="role-visual" aria-hidden="true">AI/ML Engineer — <span id="typed">Generative AI, LLMs, AI Agents, RAG, Computer Vision</span><span class="caret"></span></span>
+          </p>
+          <p class="pitch">AI/ML engineer with about three years building and deploying production machine learning and generative AI systems in healthcare, pharma, and fintech. I build LangChain and LangGraph agents, advanced RAG pipelines, LLM applications, and computer vision and OCR solutions, and ship them as FastAPI and Flask services on GCP and AWS.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="Abeeha_resume.pdf" download="Abeeha_resume.pdf">Download CV</a>
+            <a class="btn btn-ghost" href="mailto:abeehamirza18@gmail.com">Email</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/abeeha-baig-401a60240/" rel="me noopener noreferrer" target="_blank">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/abeeha-baig" rel="me noopener noreferrer" target="_blank">GitHub</a>
+          </div>
+          <ul class="facts">
+            <li><strong>About 3 years</strong><span>Production ML and generative AI</span></li>
+            <li><strong>MS Data Science</strong><span>NEDUET, in progress</span></li>
+            <li><strong>English C1</strong><span>Professional working language</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">01 — Experience</p>
+          <h2 id="experience-title">Where the systems shipped</h2>
+          <p class="lede">Production work across pharma compliance, healthcare, and fintech. Highlights below follow the CV.</p>
+        </div>
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-head">
+              <div>
+                <h3>AI Innovation Engineer</h3>
+                <p class="org">Qordata · Karachi, Pakistan</p>
+              </div>
+              <p class="dates"><time datetime="2025-07">July 2025</time> – Present</p>
+            </div>
+            <ul>
+              <li>Architected <strong>agentic RAG workflows</strong> for real-time pharmaceutical compliance monitoring, including automated web search and comparison of drug data.</li>
+              <li>Built agentic chatbots with <strong>LangChain and LangGraph</strong> for product-change decisions, and SQL agents that query structured data in natural language.</li>
+              <li>Integrated <strong>Gemini 3 Flash and Gemini 3.1 Flash Lite</strong> with structured prompt engineering and LLM-based rule classification.</li>
+              <li>Engineered document OCR with <strong>AWS Textract, PaddleOCR, RapidOCR, and Gemini DocumentAI</strong> for handwritten and recursive text, plus preprocessing (adaptive thresholding, deskewing, sharpening) and <strong>YOLOv8 / YOLOv9</strong> models that detect circles in documents.</li>
+              <li>Deployed containerized AI services on <strong>GCP</strong> (Cloud Run, Cloud Storage, Firestore, Vertex AI) and <strong>AWS</strong> with CI/CD, and built TypeScript and React interfaces.</li>
+            </ul>
+          </li>
+          <li class="job reveal">
+            <div class="job-head">
+              <div>
+                <h3>Machine Learning Engineer</h3>
+                <p class="org">PixelEdge Solutions (Pvt.) Limited · Karachi, Pakistan</p>
+              </div>
+              <p class="dates"><time datetime="2023-10">October 2023</time> – <time datetime="2025-06">June 2025</time></p>
+            </div>
+            <ul>
+              <li>Designed <strong>LangChain agents</strong> for multi-step queries across healthcare and financial products, including SQL Agent and Pandas Agent tools for fintech datasets.</li>
+              <li>Built modular and advanced <strong>RAG pipelines</strong> with HyDE, step-back prompting, vector databases, and re-ranking, and benchmarked HNSW against flat indexing.</li>
+              <li>Built financial extraction pipelines with regex, NLP, and Pandas, and automated collection with <strong>BeautifulSoup and Selenium</strong>.</li>
+              <li>Fine-tuned <strong>GPT-2</strong> on healthcare data for domain-specific next-word prediction, and used LLMs with prompt engineering for project-audit summarization.</li>
+              <li>Applied <strong>DBSCAN</strong> clustering and sentiment analysis to customer reviews, and integrated OpenAI, Gemini, Claude, DeepSeek, and LLaMA.</li>
+              <li>Shipped <strong>Flask and FastAPI</strong> services with error handling, and deployed and managed projects on AWS.</li>
+            </ul>
+          </li>
+          <li class="job reveal">
+            <div class="job-head">
+              <div>
+                <h3>Machine Learning Intern</h3>
+                <p class="org">Techno-Hacks Edu Tech · Karachi, Pakistan</p>
+              </div>
+              <p class="dates"><time datetime="2023-08">August 2023</time> – <time datetime="2023-09">September 2023</time></p>
+            </div>
+            <ul>
+              <li>Built classical machine learning models for <strong>classification, prediction, and regression</strong> on real-world datasets.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">02 — Skills</p>
+          <h2 id="skills-title">Stack, grouped the way the CV lists it</h2>
+        </div>
+        <div class="skills">
+          <article class="skill reveal">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>TypeScript</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Machine learning &amp; deep learning</h3>
+            <ul class="chips">
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>Keras</li>
+              <li>scikit-learn</li>
+              <li>Classification</li>
+              <li>Regression</li>
+              <li>Clustering (DBSCAN)</li>
+              <li>Predictive modeling</li>
+              <li>Model training</li>
+              <li>Fine-tuning (GPT-2)</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Generative AI &amp; LLMs</h3>
+            <ul class="chips">
+              <li>OpenAI</li>
+              <li>Gemini</li>
+              <li>Claude</li>
+              <li>DeepSeek</li>
+              <li>LLaMA</li>
+              <li>Prompt engineering</li>
+              <li>Structured outputs</li>
+              <li>Tool / function calling</li>
+              <li>LLM fine-tuning</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>AI agents &amp; frameworks</h3>
+            <ul class="chips">
+              <li>LangChain</li>
+              <li>LangGraph</li>
+              <li>AI agents</li>
+              <li>Multi-agent workflows</li>
+              <li>SQL Agent</li>
+              <li>Pandas Agent</li>
+              <li>Agentic RAG</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>RAG &amp; retrieval</h3>
+            <ul class="chips">
+              <li>Modular RAG</li>
+              <li>Advanced RAG</li>
+              <li>Vector databases</li>
+              <li>Embeddings</li>
+              <li>Semantic search</li>
+              <li>HNSW indexing</li>
+              <li>Flat (exact) indexing</li>
+              <li>Re-ranking</li>
+              <li>HyDE</li>
+              <li>Step-back prompting</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Computer vision &amp; OCR</h3>
+            <ul class="chips">
+              <li>YOLOv8</li>
+              <li>YOLOv9</li>
+              <li>Object detection</li>
+              <li>Deskewing</li>
+              <li>Adaptive thresholding</li>
+              <li>Sharpening</li>
+              <li>AWS Textract</li>
+              <li>PaddleOCR</li>
+              <li>RapidOCR</li>
+              <li>Gemini DocumentAI</li>
+              <li>Image recognition</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>NLP</h3>
+            <ul class="chips">
+              <li>Sentiment analysis</li>
+              <li>Text summarization</li>
+              <li>Text preprocessing</li>
+              <li>Regex</li>
+              <li>Information extraction</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Data engineering</h3>
+            <ul class="chips">
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>BeautifulSoup</li>
+              <li>Selenium</li>
+              <li>ETL / data pipelines</li>
+              <li>Excel reporting</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Backend &amp; frontend</h3>
+            <ul class="chips">
+              <li>FastAPI</li>
+              <li>Flask</li>
+              <li>REST APIs</li>
+              <li>React.js</li>
+              <li>TypeScript</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Cloud &amp; MLOps</h3>
+            <ul class="chips">
+              <li>Vertex AI</li>
+              <li>Cloud Run</li>
+              <li>Cloud Storage</li>
+              <li>Firestore</li>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+              <li>Git / GitHub</li>
+            </ul>
+          </article>
+          <article class="skill reveal">
+            <h3>Tools</h3>
+            <ul class="chips">
+              <li>Streamlit</li>
+              <li>GitHub Copilot</li>
+              <li>Antigravity (AI coding assistant)</li>
+              <li>n8n (academy course)</li>
+            </ul>
+            <p class="course-note">n8n is listed from the n8n academy course, not as production experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">03 — Projects</p>
+          <h2 id="projects-title">Selected repositories</h2>
+          <p class="lede">One-line descriptions follow each public README, plus the health agent that is still in progress and has no repository link yet.</p>
+        </div>
+        <div class="projects">
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Healthcare sign-in OCR</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/ocr" target="_blank" rel="noopener noreferrer" aria-label="Healthcare sign-in OCR on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>FastAPI pipeline that classifies healthcare sign-in PDF pages, reads handwritten names and credentials with Gemini, and filters those credentials with rule-based matching.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Gemini</li>
+              <li>PyMuPDF</li>
+              <li>Pandas</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>RAG-ODS</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/RAG-ODS" target="_blank" rel="noopener noreferrer" aria-label="RAG-ODS on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Streamlit RAG chatbot that chunks and embeds PDFs with LangChain — including Oracle Database security guides — and answers from that retrieved context.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>Streamlit</li>
+              <li>LangChain</li>
+              <li>OpenAI</li>
+              <li>Chroma</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Financial data bot</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/financial-chatbot" target="_blank" rel="noopener noreferrer" aria-label="Financial data bot on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>FastAPI chatbot for natural-language questions over CSV financial data, using LangChain’s Pandas agent and OpenAI.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>LangChain</li>
+              <li>Pandas</li>
+              <li>OpenAI</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Lifestyle coach agent</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/Lifestyle-coach-agent" target="_blank" rel="noopener noreferrer" aria-label="Lifestyle coach agent on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Streamlit wellness agent that scrapes an article URL with Firecrawl and summarizes it with LangChain and GPT-4o-mini, including sources such as Medium and Healthline.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>Streamlit</li>
+              <li>LangChain</li>
+              <li>Firecrawl</li>
+              <li>GPT-4o-mini</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Health &amp; macros agent</h3>
+              <span class="status">In progress</span>
+            </div>
+            <p>Healthcare agent built with LangGraph to manage health goals and nutrition and macro tracking. No public repository yet.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>LangGraph</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Next-word prediction</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/Next-Word-Prediction" target="_blank" rel="noopener noreferrer" aria-label="Next-word prediction on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Notebook that fine-tunes GPT-2 with Hugging Face Transformers and PyTorch on healthcare text for next-word prediction.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>Transformers</li>
+              <li>GPT-2</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Prediction and classification</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/Prediction-and-Classification" target="_blank" rel="noopener noreferrer" aria-label="Prediction and classification on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>TechnoHacks internship notebooks: logistic regression on the Iris dataset and a random-forest classifier for red-wine quality.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>scikit-learn</li>
+              <li>Pandas</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Amazon product scrape</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/web-scraping" target="_blank" rel="noopener noreferrer" aria-label="Amazon product scrape on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Selenium notebook that searches Amazon for smartphones and collects product titles across result pages.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>Selenium</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Basic Python projects</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/Basic-Python-projects" target="_blank" rel="noopener noreferrer" aria-label="Basic Python projects on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Early projects from the start of the ML journey: a calculator, hangman, tic-tac-toe, and a student-performance analysis notebook.</p>
+            <ul class="chips">
+              <li>Python</li>
+              <li>Pandas</li>
+            </ul>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-top">
+              <h3>Multi-agents</h3>
+              <a class="repo-link" href="https://github.com/abeeha-baig/multi-agents" target="_blank" rel="noopener noreferrer" aria-label="Multi-agents on GitHub (opens in a new tab)">GitHub</a>
+            </div>
+            <p>Public repository reserved for multi-agent work. The README is a title only, and no implementation is published yet.</p>
+            <ul class="chips">
+              <li>Multi-agent</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">04 — Education</p>
+          <h2 id="education-title">Degrees and certifications</h2>
+        </div>
+        <div class="split">
+          <div class="panel reveal">
+            <article class="degree">
+              <h3>M.S. Data Science</h3>
+              <p class="meta">NED University of Engineering and Technology (NEDUET)</p>
+              <p class="meta"><time datetime="2025-01">January 2025</time> – Present · CGPA 3.33/4.00</p>
+            </article>
+            <article class="degree">
+              <h3>B.E. Avionics</h3>
+              <p class="meta">Karachi Institute of Economics and Technology (KIET)</p>
+              <p class="meta"><time datetime="2020-01">January 2020</time> – <time datetime="2023-12">December 2023</time> · CGPA 3.56/4.00</p>
+            </article>
+            <p class="meta">University projects included Python programming projects and image recognition systems.</p>
+            <p class="meta">English: C1 — professional working language.</p>
+          </div>
+          <div class="panel reveal">
+            <h3>Courses &amp; certifications</h3>
+            <ol class="certs">
+              <li><span class="num">01</span><div><strong>Generative AI with LLMs</strong><span>Coursera</span></div></li>
+              <li><span class="num">02</span><div><strong>N8n for automation</strong><span>n8n academy — course-level only, not production experience</span></div></li>
+              <li><span class="num">03</span><div><strong>AI Agents</strong><span>Hugging Face</span></div></li>
+              <li><span class="num">04</span><div><strong>OCI Generative AI Professional Certification</strong><span>Oracle University</span></div></li>
+              <li><span class="num">05</span><div><strong>Building Recommendation Systems using Machine Learning</strong><span>Great Learning Academy</span></div></li>
+              <li><span class="num">06</span><div><strong>Building Systems with ChatGPT API and Gemini API</strong><span>DeepLearning.AI</span></div></li>
+              <li><span class="num">07</span><div><strong>Python Programming</strong><span>Open Weaver</span></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <p class="kicker">05 — Contact</p>
+          <h2 id="contact-title">Let’s talk about the role</h2>
+          <p class="lede">For AI/ML engineering conversations, the fastest path is email. The CV is the same PDF as the download in the header.</p>
+          <p><a class="email-link" href="mailto:abeehamirza18@gmail.com">abeehamirza18@gmail.com</a></p>
+          <div class="cta-row">
+            <button class="copy-btn" id="copy-email" type="button">Copy email</button>
+            <a class="btn btn-primary" href="Abeeha_resume.pdf" download="Abeeha_resume.pdf">Download CV</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/abeeha-baig-401a60240/" rel="me noopener noreferrer" target="_blank">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/abeeha-baig" rel="me noopener noreferrer" target="_blank">GitHub</a>
+          </div>
+          <p id="copy-status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <p>Abeeha Baig · AI/ML Engineer</p>
+      <nav aria-label="Footer">
+        <a href="mailto:abeehamirza18@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/abeeha-baig-401a60240/" rel="me noopener noreferrer" target="_blank">LinkedIn</a>
+        <a href="https://github.com/abeeha-baig" rel="me noopener noreferrer" target="_blank">GitHub</a>
+        <a href="Abeeha_resume.pdf" download="Abeeha_resume.pdf">CV</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
